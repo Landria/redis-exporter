@@ -1,17 +1,16 @@
-# Running the Redis Exporter
+# Exporter
+## Running the Redis Exporter
 
-## Create a Docker container
+`docker-compose up`
 
-`docker build --tag exporter .`
+## Running containers with rebuild
 
-## Run a container
-
-`docker run -p 80:4567 exporter`
+`docker-compose up --build`
 
 ## Get the metrics
 
-`curl http://127.0.0.1/metrics`
+`curl http://127.0.0.1:4567/metrics`
 
 ## Runnung the tests
 
-`bundle exec rspec`
+`cd api && bundle exec rspec`

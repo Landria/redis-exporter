@@ -1,0 +1,26 @@
+version: '3'
+services:
+  api:
+    build: api
+    ports:
+      - "4567:4567"
+    networks:
+      - api
+      - backend
+  populator:
+    build: populator
+    networks:
+      - backend
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+    networks:
+      - backend
+    volumes:
+      - "/data"
+
+networks:
+  api:
+  backend:
+   internal: true

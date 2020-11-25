@@ -11,9 +11,10 @@ describe 'Exporter' do
     Exporter.new
   end
 
-  it "says hello" do
+  it "returns redis info hash" do
     get '/metrics'
+
     expect(last_response).to be_ok
-    expect(last_response.body).to eq('Hello')
+    expect(JSON.parse(last_response.body)).to be_a(Hash)
   end
 end

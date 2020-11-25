@@ -1,7 +1,7 @@
 FROM ruby:2.6.5
 
-WORKDIR /app
-COPY . /app
+WORKDIR /api
+COPY . /api
 RUN gem install bundler:2.1.4
 RUN bundle install
 
