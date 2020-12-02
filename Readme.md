@@ -1,4 +1,4 @@
-# Exporter
+# Redis Exporter
 ## Running the Redis Exporter
 
 `docker-compose up`

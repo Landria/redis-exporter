@@ -1,10 +1,9 @@
 {
-  "connected_clients": "<count>",
-  "blocked_clients": "0",
-  "tracking_clients": "0",
-  "clients_in_timeout_table": "0",
-  "mem_clients_slaves": "<mem>",
-  "mem_clients_normal": "<mem>",
-  "keyspace_hits": "0",
-  "keyspace_misses": "0"
+  "redis_connected_clients": "<value>",
+  "redis_blocked_clients": "<value>",
+  "redis_tracking_clients": "<value>",
+  "redis_clients_in_timeout_table": "<value>",
+  "redis_keys_per_database_count{databse_name=db0}": "<value>",
+  "redis_keys_expiring_keys_count{databse_name=db0}": "<value>",
+  "redis_keys_average_key_ttl_seconds{databse_name=db0}": "<value>"
 }

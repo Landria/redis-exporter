@@ -4,4 +4,4 @@ ENV['APP_ENV'] = 'development'
 
 require './app/api'
 
-run Exporter::Api.new
+run RedisExporter::Api.new

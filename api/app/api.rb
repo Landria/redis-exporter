@@ -8,12 +8,13 @@ require 'dotenv'
 
 Dotenv.load
 
-module Exporter
+module RedisExporter
   class Api < Sinatra::Base
-    get "/metrics/?:keys?" do
-      keys = params[:keys]&.split(",")
-      info = Exporter::RedisConnection.new.info
-      Exporter::Parser.call(info: info, keys: keys).to_json
+    get '/metrics/?:keys?' do
+      keys = params[:keys]&.split(',')
+      info = RedisExporter::RedisConnection.new.info
+
+      RedisExporter::Parser.call(info: info, keys: keys).to_json
     end
   end
 end
