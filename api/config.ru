@@ -1,3 +1,7 @@
-require './app/exporter'
+# frozen_string_literal: true
 
-run Exporter.new
+ENV['APP_ENV'] = 'development'
+
+require './app/api'
+
+run Exporter::Api.new

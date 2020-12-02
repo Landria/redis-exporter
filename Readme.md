@@ -8,9 +8,13 @@
 `docker-compose up --build`
 
 ## Get the metrics
+`curl http://127.0.0.1:9999/metrics`
 
-`curl http://127.0.0.1:4567/metrics`
+or with specified keys
 
-## Runnung the tests
+
+`curl http://127.0.0.1:9999/metrics/clients,keyspace`
+
+## Runnung specs
 
 `cd api && bundle exec rspec`
